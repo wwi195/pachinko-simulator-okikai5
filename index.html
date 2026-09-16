@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>パチンコシミュレーター（P沖海物語5 桜凱旋）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <div id="title-bar">パチンコ　P沖海物語5　桜凱旋</div>
+
+    <div id="header">
+
+      <div class="hrow hrow1">
+        <div class="spins-block">
+          <span class="spins-current" id="current-spins">0</span>
+          <span class="spins-unit">回</span>
+          <span class="spins-sep">／累計</span>
+          <span class="spins-total" id="total-spins-disp">0</span>
+          <span class="spins-unit">回</span>
+        </div>
+        <div id="mode-badge">通常時</div>
+        <div class="esup-block">
+          <div class="esup-label">時短残り／残保留</div>
+          <div class="esup-value" id="rush-count">－</div>
+        </div>
+      </div>
+
+      <div class="hrow hrow2">
+        <div class="money-block">
+          <span class="money-label">持ち球</span>
+          <span class="money-value gold" id="mochi-dama">0</span>
+          <span class="money-unit">球</span>
+        </div>
+        <div class="money-block">
+          <span class="money-label">投資</span>
+          <span class="money-value red" id="toushi-value">0</span>
+          <span class="money-unit">円</span>
+        </div>
+        <div class="money-block">
+          <span class="money-label">収支</span>
+          <span class="money-value red" id="shuushi-value">0</span>
+          <span class="money-unit">円</span>
+        </div>
+      </div>
+
+      <div class="hrow hrow3">
+        <div class="hrow3-header">
+          <span class="hrow3-title">大当たり総回数</span>
+          <span class="total-hit-block">
+            <span class="total-hit-count" id="total-hit-count">0回</span>
+          </span>
+          <span class="fee-block" id="fee-block">16回転/千円</span>
+        </div>
+        <div class="hrow3-normal-line">
+          <span class="hit-label2">通常時初当たり</span>
+          <span class="hit-count" id="normal-first-hit">0回</span>
+          <span class="hit-prob" id="normal-first-prob">1/―</span>
+          <span class="rush-entry" id="rush-entry-info">(超旋風RUSH突入0回)</span>
+        </div>
+      </div>
+
+    </div><!-- /header -->
+
+    <div id="main-screen"></div>
+
+    <div id="rush-stats-bar">
+      <div class="rsb-header">
+        <span class="rsb-title">通算RUSH成績</span>
+        <span class="rsb-item">
+          <span class="rsb-label">RUSH中当たり</span>
+          <span class="rsb-val" id="rs-hits">0回</span>
+        </span>
+        <span class="rsb-item">
+          <span class="rsb-label">RUSH中回転</span>
+          <span class="rsb-val" id="rs-spins">0回</span>
+        </span>
+      </div>
+      <div class="rsb-row">
+        <span class="rsb-item">
+          <span class="rsb-label">大ラウンド</span>
+          <span class="rsb-val" id="rs-big">0回</span>
+        </span>
+        <span class="rsb-item">
+          <span class="rsb-label">小ラウンド</span>
+          <span class="rsb-val" id="rs-small">0回</span>
+        </span>
+      </div>
+    </div>
+
+    <div id="log-area">
+      <div id="log-title">履歴</div>
+      <div id="log-list"></div>
+    </div>
+
+  </div>
+  <script src="logic.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

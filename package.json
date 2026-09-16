@@ -1,0 +1,8 @@
+{
+  "name": "pachinko-simulator-okikai5",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  }
+}
